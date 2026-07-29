@@ -1,5 +1,6 @@
 {
   "itemGroup.world_of_color": "Example Mod Tab",
   "block.world_of_color.example_block": "Example Block",
-  "item.world_of_color.example_item": "Example Item"
+  "item.world_of_color.example_item": "Example Item",
+  "creativetab.world_of_color.paint": "Paint"
 }

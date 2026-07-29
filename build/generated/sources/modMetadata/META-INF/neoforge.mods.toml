@@ -29,10 +29,10 @@ displayName = "Create: World of Color" #mandatory
 # A text field displayed in the mod UI
 #credits="" #optional
 # A text field displayed in the mod UI
-authors = "" #optional
+authors = "ItsFireStorm" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
-description = ''''''
+description = '''Paint for Create: Encapsulated'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
