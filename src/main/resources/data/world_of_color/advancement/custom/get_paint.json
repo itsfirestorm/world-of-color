@@ -9,6 +9,7 @@
     "announce_to_chat": false,
     "hidden": false
   },
+  "parent": "world_of_color:custom/root",
   "criteria": {
     "GetItem": {
       "trigger": "minecraft:inventory_changed",
