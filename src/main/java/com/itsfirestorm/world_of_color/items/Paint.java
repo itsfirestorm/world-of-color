@@ -1,5 +1,7 @@
 package com.itsfirestorm.world_of_color.items;
 
+import com.itsfirestorm.world_of_color.registries.ModDamageTypes;
+import com.itsfirestorm.world_of_color.registries.ModTriggers;
 import com.itsfirestorm.world_of_color.registries.items.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.damagesource.DamageSource;

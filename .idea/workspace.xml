@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0886953-58b3-41b4-8438-f599168f5cd5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/fluids/PaintFluid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/fluids/PaintFluidType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/items/Paint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/ModFluids.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/items/ModCreativeModeTabs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/items/ModItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/util/PaintColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/world_of_color.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/modMetadata/META-INF/neoforge.mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/modMetadata/META-INF/neoforge.mods.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.itsfirestorm.world_of_color/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.itsfirestorm.world_of_color/world_of_color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/WorldOfColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/lang/en_us.json" afterDir="false" />
+    <list default="true" id="e0886953-58b3-41b4-8438-f599168f5cd5" name="Changes" comment="Added Paint items and Paint Fluids from Encapsulated.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/advancements/DrinkingPaintTrigger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/ModDamageTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/ModTriggers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/items/Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/items/Paint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785251931559</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Paint items and Paint Fluids from Encapsulated.">
+      <option name="closed" value="true" />
+      <created>1785368129146</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785368129146</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -292,6 +280,7 @@
     <MESSAGE value="Update README.md, gradle.xml, workspace.xml" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update build.gradle to include create as a dependency and gradle.properties to include version variables and fixed mod_group_id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update build.gradle to include create as a dependency and gradle.properties to include version variables and fixed mod_group_id" />
+    <MESSAGE value="Added Paint items and Paint Fluids from Encapsulated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Paint items and Paint Fluids from Encapsulated." />
   </component>
 </project>
