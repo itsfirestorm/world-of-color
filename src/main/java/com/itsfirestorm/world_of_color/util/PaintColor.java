@@ -16,7 +16,7 @@ public enum PaintColor {
     LIGHTGRAY(0xAAAAB0),
     GRAY(0x808086),
     BLACK(0x50597C),
-    WHITE(-1);
+    WHITE(0xFFFFFF);
 
     private final int color;
 
