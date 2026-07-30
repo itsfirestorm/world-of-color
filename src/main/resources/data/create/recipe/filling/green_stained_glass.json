@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 25,
+      "fluid": "world_of_color:green_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:green_stained_glass"
+    }
+  ]
+}

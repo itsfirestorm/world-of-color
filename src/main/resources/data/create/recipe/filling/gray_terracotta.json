@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:terracotta"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 25,
+      "fluid": "world_of_color:gray_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:gray_terracotta"
+    }
+  ]
+}
