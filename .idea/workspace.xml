@@ -4,11 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0886953-58b3-41b4-8438-f599168f5cd5" name="Changes" comment="Added Paint items and Paint Fluids from Encapsulated.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/advancements/DrinkingPaintTrigger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/ModDamageTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/ModTriggers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/items/Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/items/Paint.java" afterDir="false" />
+    <list default="true" id="e0886953-58b3-41b4-8438-f599168f5cd5" name="Changes" comment="Added damage type for a special paint and advancement triggers">
+      <change afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/client/ModClientSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/black_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/blue_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/brown_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/cyan_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/gray_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/green_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/light_blue_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/light_gray_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/lime_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/magenta_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/orange_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/pink_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/purple_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/rainbow_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/red_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/white_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item/yellow_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/block/liquid_soft_flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/block/liquid_soft_flow.png.mcmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/block/liquid_soft_still.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/block/liquid_soft_still.png.mcmeta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/black_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/blue_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/brown_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/cyan_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/gray_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/green_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/light_blue_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/light_gray_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/lime_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/magenta_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/orange_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/pink_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/purple_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/rainbow_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/red_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/white_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/item/yellow_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/damage_type/bypasses_armor.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/damage_type/bypasses_effects.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/damage_type/bypasses_invulnerability.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/world_of_color/advancement/custom/drink_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/world_of_color/advancement/custom/drink_rainbow.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/world_of_color/advancement/custom/get_paint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/world_of_color/damage_type/rainbow.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/world_of_color/tags/fluid/paint_fluid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/world_of_color/tags/item/paint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/configuration-cache.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/configuration-cache/configuration-cache.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/WorldOfColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/WorldOfColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/items/ModCreativeModeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itsfirestorm/world_of_color/registries/items/ModCreativeModeTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/world_of_color/lang/en_us.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +129,9 @@
     &quot;accountId&quot;: &quot;b17b3940-cb14-41e1-91fb-72ada759863e&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8,
   &quot;fromUser&quot;: false
@@ -81,18 +144,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle./home/itsfirestorm/Documents/server-stuff/world_of_color [wrapper].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/itsfirestorm/Documents/server-stuff/world_of_color&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle./home/itsfirestorm/Documents/server-stuff/world_of_color [wrapper].executor": "Run",
+    "Gradle.Build.executor": "Run",
+    "Gradle.world_of_color [:net.neoforged.devlaunch.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/itsfirestorm/Documents/server-stuff/world_of_color/src/main/resources/assets/world_of_color/models/item"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.Build">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/world_of_color/models/item" />
+      <recent name="$PROJECT_DIR$/run" />
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/world_of_color/textures/block" />
+      <recent name="$PROJECT_DIR$/src/main/resources/data/world_of_color/advancement/custom" />
+      <recent name="$PROJECT_DIR$/src/main/resources/data/world_of_color/damage_type" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
       <module name="world_of_color.main" />
@@ -272,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785368129146</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added damage type for a special paint and advancement triggers">
+      <option name="closed" value="true" />
+      <created>1785370528607</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785370528607</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -281,6 +363,7 @@
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update build.gradle to include create as a dependency and gradle.properties to include version variables and fixed mod_group_id" />
     <MESSAGE value="Added Paint items and Paint Fluids from Encapsulated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Paint items and Paint Fluids from Encapsulated." />
+    <MESSAGE value="Added damage type for a special paint and advancement triggers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added damage type for a special paint and advancement triggers" />
   </component>
 </project>

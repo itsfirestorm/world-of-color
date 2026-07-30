@@ -6,21 +6,18 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-@EventBusSubscriber(modid = WorldOfColor.MODID, value = Dist.CLIENT)
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, WorldOfColor.MODID);
 
     public static final Supplier<CreativeModeTab> WORLD_OF_COLOR_ITEMS_TAB = CREATIVE_MODE_TAB.register(
             "world_of_color_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack((ItemLike) ModItems.RAINBOW_PAINT))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RAINBOW_PAINT.get()))
                     .title(Component.translatable("creativetab.world_of_color.paint"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModItems.REDPAINT);

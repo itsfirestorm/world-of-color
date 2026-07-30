@@ -1,0 +1,98 @@
+{
+  "display": {
+    "icon": {
+      "id": "world_of_color:rainbow_paint"
+    },
+    "title": "Taste the Rainbow",
+    "description": "Drink every color of Paint; why would you do this?",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "world_of_color:custom/drink_paint",
+  "criteria": {
+    "drank_red": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "RED" }
+    },
+    "drank_blue": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "BLUE" }
+    },
+    "drank_green": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "GREEN" }
+    },
+    "drank_yellow": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "YELLOW" }
+    },
+    "drank_pink": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "PINK" }
+    },
+    "drank_purple": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "PURPLE" }
+    },
+    "drank_magenta": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "MAGENTA" }
+    },
+    "drank_lime": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "LIME" }
+    },
+    "drank_cyan": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "CYAN" }
+    },
+    "drank_lightblue": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "LIGHTBLUE" }
+    },
+    "drank_orange": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "ORANGE" }
+    },
+    "drank_brown": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "BROWN" }
+    },
+    "drank_lightgray": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "LIGHTGRAY" }
+    },
+    "drank_gray": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "GRAY" }
+    },
+    "drank_black": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "BLACK" }
+    },
+    "drank_white": {
+      "trigger": "world_of_color:drank_paint",
+      "conditions": { "color": "WHITE" }
+    }
+  },
+  "requirements": [
+    ["drank_red"],
+    ["drank_blue"],
+    ["drank_green"],
+    ["drank_yellow"],
+    ["drank_pink"],
+    ["drank_purple"],
+    ["drank_magenta"],
+    ["drank_lime"],
+    ["drank_cyan"],
+    ["drank_lightblue"],
+    ["drank_orange"],
+    ["drank_brown"],
+    ["drank_lightgray"],
+    ["drank_gray"],
+    ["drank_black"],
+    ["drank_white"]
+  ]
+}
