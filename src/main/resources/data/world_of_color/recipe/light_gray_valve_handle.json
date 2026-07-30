@@ -1,0 +1,16 @@
+{
+  "type": "world_of_color:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "world_of_color:light_gray_paint"
+    },
+    {
+      "item": "create:copper_valve_handle"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:light_gray_valve_handle"
+  }
+}
