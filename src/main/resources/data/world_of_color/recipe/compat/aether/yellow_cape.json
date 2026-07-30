@@ -1,0 +1,25 @@
+{
+  "type": "world_of_color:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "world_of_color:yellow_paint"
+    },
+    [
+      {
+        "item": "aether:red_cape"
+      },
+      {
+        "item": "aether:blue_cape"
+      },
+      {
+        "item": "aether:white_cape"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "aether:yellow_cape"
+  }
+}
+

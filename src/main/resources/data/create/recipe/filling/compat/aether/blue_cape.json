@@ -1,0 +1,26 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "aether:red_cape"
+      },
+      {
+        "item": "aether:white_cape"
+      },
+      {
+        "item": "aether:yellow_cape"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "world_of_color:blue_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "aether:blue_cape"
+    }
+  ]
+}
