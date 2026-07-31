@@ -1,5 +1,6 @@
 package com.itsfirestorm.world_of_color.util;
 
+import com.itsfirestorm.world_of_color.api.PaintColor;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

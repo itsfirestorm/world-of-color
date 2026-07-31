@@ -1,6 +1,6 @@
 package com.itsfirestorm.world_of_color.advancements;
 
-import com.itsfirestorm.world_of_color.util.PaintColor;
+import com.itsfirestorm.world_of_color.api.PaintColor;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.advancements.critereon.ContextAwarePredicate;

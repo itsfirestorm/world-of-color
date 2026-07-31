@@ -1,6 +1,7 @@
 package com.itsfirestorm.world_of_color.registries;
 
 import com.itsfirestorm.world_of_color.WorldOfColor;
+import com.itsfirestorm.world_of_color.api.RecipeIds;
 import com.itsfirestorm.world_of_color.recipes.PaintDyesArmor;
 import com.itsfirestorm.world_of_color.recipes.PaintDyesBlocks;
 import com.mojang.datafixers.util.Either;
@@ -27,11 +28,11 @@ public class ModRecipeSerializers {
             DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, WorldOfColor.MODID);
 
     public static final DeferredHolder<RecipeSerializer<?>, SimpleCraftingRecipeSerializer<PaintDyesArmor>> PAINT_ARMOR_DYE =
-            RECIPE_SERIALIZERS.register("paint_armor_dye",
+            RECIPE_SERIALIZERS.register(RecipeIds.PAINT_ARMOR_DYE.getPath(),
                     () -> new SimpleCraftingRecipeSerializer<>(PaintDyesArmor::new));
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<PaintDyesBlocks>> PAINT_BLOCK_DYE =
-            RECIPE_SERIALIZERS.register("paintable",
+            RECIPE_SERIALIZERS.register(RecipeIds.PAINT_BLOCK_DYE.getPath(),
                     () -> new RecipeSerializer<>() {
 
                         private final MapCodec<PaintDyesBlocks> CODEC = RecordCodecBuilder.mapCodec(instance ->

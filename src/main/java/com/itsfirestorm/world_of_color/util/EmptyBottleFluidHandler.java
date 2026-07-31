@@ -1,7 +1,9 @@
 package com.itsfirestorm.world_of_color.util;
 
+import com.itsfirestorm.world_of_color.api.PaintColor;
+import com.itsfirestorm.world_of_color.api.WorldOfColorAPI;
 import com.itsfirestorm.world_of_color.fluids.PaintFluidType;
-import com.itsfirestorm.world_of_color.registries.items.ModItems;
+import com.itsfirestorm.world_of_color.registries.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
@@ -66,24 +68,9 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
         PaintColor color = paintFluidType.getPaintColor();
 
         // Transform the empty bottle into the corresponding paint item
-        return switch (color) {
-            case RED -> new ItemStack(ModItems.REDPAINT.get());
-            case BLUE -> new ItemStack(ModItems.BLUEPAINT.get());
-            case GREEN -> new ItemStack(ModItems.GREENPAINT.get());
-            case YELLOW -> new ItemStack(ModItems.YELLOWPAINT.get());
-            case PINK -> new ItemStack(ModItems.PINKPAINT.get());
-            case BLACK -> new ItemStack(ModItems.BLACKPAINT.get());
-            case WHITE -> new ItemStack(ModItems.WHITEPAINT.get());
-            case PURPLE -> new ItemStack(ModItems.PURPLEPAINT.get());
-            case MAGENTA -> new ItemStack(ModItems.MAGENTAPAINT.get());
-            case LIME -> new ItemStack(ModItems.LIMEPAINT.get());
-            case CYAN -> new ItemStack(ModItems.CYANPAINT.get());
-            case LIGHTBLUE -> new ItemStack(ModItems.LIGHTBLUEPAINT.get());
-            case ORANGE -> new ItemStack(ModItems.ORANGEPAINT.get());
-            case BROWN -> new ItemStack(ModItems.BROWNPAINT.get());
-            case LIGHTGRAY -> new ItemStack(ModItems.LIGHTGRAYPAINT.get());
-            case GRAY -> new ItemStack(ModItems.GRAYPAINT.get());
-        };
+        return WorldOfColorAPI.registry().getPaintItem(color)
+                .map(ItemStack::new)
+                .orElse(ItemStack.EMPTY);
     }
 
     @Override

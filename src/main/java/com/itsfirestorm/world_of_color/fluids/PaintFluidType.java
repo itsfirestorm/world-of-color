@@ -1,6 +1,6 @@
 package com.itsfirestorm.world_of_color.fluids;
 
-import com.itsfirestorm.world_of_color.util.PaintColor;
+import com.itsfirestorm.world_of_color.api.PaintColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;

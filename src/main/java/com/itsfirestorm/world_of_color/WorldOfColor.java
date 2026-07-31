@@ -1,17 +1,21 @@
 package com.itsfirestorm.world_of_color;
 
+import com.itsfirestorm.world_of_color.api.PaintHelper;
+import com.itsfirestorm.world_of_color.api.PaintRegistryImpl;
+import com.itsfirestorm.world_of_color.api.WorldOfColorAPI;
 import com.itsfirestorm.world_of_color.events.BasinDyeEventHandler;
 import com.itsfirestorm.world_of_color.items.Paint;
 import com.itsfirestorm.world_of_color.registries.ModFluids;
 import com.itsfirestorm.world_of_color.registries.ModRecipeSerializers;
 import com.itsfirestorm.world_of_color.registries.ModTriggers;
-import com.itsfirestorm.world_of_color.registries.client.ModClientSetup;
-import com.itsfirestorm.world_of_color.registries.items.ModCreativeModeTabs;
-import com.itsfirestorm.world_of_color.registries.items.ModItems;
+import com.itsfirestorm.world_of_color.registries.ModClientSetup;
+import com.itsfirestorm.world_of_color.registries.ModCreativeModeTabs;
+import com.itsfirestorm.world_of_color.registries.ModItems;
 import com.itsfirestorm.world_of_color.util.FluidItemHandler;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -83,6 +87,9 @@ public class WorldOfColor {
         if (FMLEnvironment.dist == Dist.CLIENT) {
             modEventBus.addListener(ModClientSetup::onRegisterClientExtensions);
         }
+
+        // Register API
+        WorldOfColorAPI.internalInit(new PaintRegistryImpl());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -109,23 +116,7 @@ public class WorldOfColor {
                     }
                     return null;
                 },
-                ModItems.REDPAINT.get(),
-                ModItems.BLUEPAINT.get(),
-                ModItems.GREENPAINT.get(),
-                ModItems.YELLOWPAINT.get(),
-                ModItems.PINKPAINT.get(),
-                ModItems.BLACKPAINT.get(),
-                ModItems.WHITEPAINT.get(),
-                ModItems.PURPLEPAINT.get(),
-                ModItems.MAGENTAPAINT.get(),
-                ModItems.LIMEPAINT.get(),
-                ModItems.CYANPAINT.get(),
-                ModItems.LIGHTBLUEPAINT.get(),
-                ModItems.ORANGEPAINT.get(),
-                ModItems.BROWNPAINT.get(),
-                ModItems.LIGHTGRAYPAINT.get(),
-                ModItems.GRAYPAINT.get()
-
+                WorldOfColorAPI.registry().allPaintItems().values().toArray(Item[]::new)
         );
     }
 

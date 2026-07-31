@@ -2,11 +2,11 @@ package com.itsfirestorm.world_of_color.items;
 
 import com.itsfirestorm.world_of_color.registries.ModDamageTypes;
 import com.itsfirestorm.world_of_color.registries.ModTriggers;
-import com.itsfirestorm.world_of_color.registries.items.ModItems;
+import com.itsfirestorm.world_of_color.registries.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.damagesource.DamageSource;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
-import com.itsfirestorm.world_of_color.util.PaintColor;
+import com.itsfirestorm.world_of_color.api.PaintColor;
 import com.itsfirestorm.world_of_color.fluids.PaintFluidType;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

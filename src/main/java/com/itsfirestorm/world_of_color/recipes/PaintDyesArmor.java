@@ -1,12 +1,12 @@
 package com.itsfirestorm.world_of_color.recipes;
 
+import com.itsfirestorm.world_of_color.api.PaintColor;
+import com.itsfirestorm.world_of_color.api.PaintHelper;
 import com.itsfirestorm.world_of_color.items.Paint;
 import com.itsfirestorm.world_of_color.registries.ModRecipeSerializers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
@@ -15,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 public class PaintDyesArmor extends CustomRecipe {
 
@@ -32,7 +33,7 @@ public class PaintDyesArmor extends CustomRecipe {
             if (stack.isEmpty()) continue;
             if (stack.getItem() instanceof Paint) {
                 paintStacks.add(stack);
-            } else if (stack.has(DataComponents.DYED_COLOR) || isDyeableArmor(stack)) {
+            } else if (stack.has(DataComponents.DYED_COLOR) || PaintHelper.isDyeableArmor(stack)) {
                 if (!armorStack.isEmpty()) return false;
                 armorStack = stack;
             } else {
@@ -50,70 +51,30 @@ public class PaintDyesArmor extends CustomRecipe {
         for (int i = 0; i < input.size(); i++) {
             ItemStack stack = input.getItem(i);
             if (stack.isEmpty()) continue;
-
             if (stack.getItem() instanceof Paint) {
                 paintStacks.add(stack);
-            } else if (stack.has(DataComponents.DYED_COLOR) || isDyeableArmor(stack)) {
+            } else if (stack.has(DataComponents.DYED_COLOR) || PaintHelper.isDyeableArmor(stack)) {
                 armorStack = stack;
             }
         }
 
         if (armorStack.isEmpty() || paintStacks.isEmpty()) return ItemStack.EMPTY;
 
+        Optional<Integer> existingColor = armorStack.has(DataComponents.DYED_COLOR)
+                ? Optional.of(Objects.requireNonNull(armorStack.get(DataComponents.DYED_COLOR)).rgb())
+                : Optional.empty();
+
+        List<PaintColor> paintColors = paintStacks.stream()
+                .filter(s -> s.getItem() instanceof Paint)
+                .map(s -> ((Paint) s.getItem()).getColor())
+                .filter(Objects::nonNull)
+                .toList();
+
+        int mixedColor = PaintHelper.blend(existingColor, paintColors);
+
         ItemStack result = armorStack.copy();
-        int mixedColor = blendColors(armorStack, paintStacks);
         result.set(DataComponents.DYED_COLOR, new DyedItemColor(mixedColor, true));
         return result;
-    }
-
-    private int blendColors(ItemStack armorStack, List<ItemStack> paintStacks) {
-        int totalR = 0;
-        int totalG = 0;
-        int totalB = 0;
-        int count = 0;
-
-        // Include existing armor color in the blend if it already has one
-        if (armorStack.has(DataComponents.DYED_COLOR)) {
-            int existingColor = Objects.requireNonNull(armorStack.get(DataComponents.DYED_COLOR)).rgb();
-            totalR += (existingColor >> 16) & 0xFF;
-            totalG += (existingColor >> 8) & 0xFF;
-            totalB += existingColor & 0xFF;
-            count++;
-        }
-
-        // Add each paint color to the blend
-        for (ItemStack paintStack : paintStacks) {
-            if (paintStack.getItem() instanceof Paint paintItem) {
-                if (paintItem.getColor() != null) {
-                    int color = paintItem.getColor().getColor();
-                    totalR += (color >> 16) & 0xFF;
-                    totalG += (color >> 8) & 0xFF;
-                    totalB += color & 0xFF;
-                    count++;
-                }
-            }
-        }
-
-        if (count == 0) return 0xFFFFFF;
-
-        // Average the colors
-        int avgR = totalR / count;
-        int avgG = totalG / count;
-        int avgB = totalB / count;
-
-        return (avgR << 16) | (avgG << 8) | avgB;
-    }
-
-
-    private boolean isDyeableArmor(ItemStack stack) {
-        if (stack.isEmpty()) return false;
-        Item item = stack.getItem();
-        return item == Items.LEATHER_HELMET
-                || item == Items.LEATHER_CHESTPLATE
-                || item == Items.LEATHER_LEGGINGS
-                || item == Items.LEATHER_BOOTS
-                || item == Items.LEATHER_HORSE_ARMOR
-                || stack.has(DataComponents.DYED_COLOR);
     }
 
     @Override
