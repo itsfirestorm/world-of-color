@@ -1,7 +1,7 @@
 package com.itsfirestorm.world_of_color.registries;
 
-import com.itsfirestorm.world_of_color.WorldOfColor;
-import com.itsfirestorm.world_of_color.api.WorldOfColorAPI;
+import com.itsfirestorm.world_of_color.WorldOfColors;
+import com.itsfirestorm.world_of_color.api.WorldOfColorsAPI;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -13,14 +13,14 @@ import java.util.function.Supplier;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister
-            .create(Registries.CREATIVE_MODE_TAB, WorldOfColor.MODID);
+            .create(Registries.CREATIVE_MODE_TAB, WorldOfColors.MODID);
 
     public static final Supplier<CreativeModeTab> WORLD_OF_COLOR_ITEMS_TAB = CREATIVE_MODE_TAB.register(
             "world_of_color_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RAINBOW_PAINT.get()))
                     .title(Component.translatable("creativetab.world_of_color.paint"))
                     .displayItems((itemDisplayParameters, output) ->
-                            WorldOfColorAPI.registry().allPaintItems().values().forEach(
+                            WorldOfColorsAPI.registry().allPaintItems().values().forEach(
                                     item -> output.accept(new ItemStack(item))
                             )
                     )

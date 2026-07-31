@@ -1,6 +1,6 @@
 package com.itsfirestorm.world_of_color.registries;
 
-import com.itsfirestorm.world_of_color.WorldOfColor;
+import com.itsfirestorm.world_of_color.WorldOfColors;
 import com.itsfirestorm.world_of_color.fluids.PaintFluid;
 import com.itsfirestorm.world_of_color.fluids.PaintFluidType;
 import com.itsfirestorm.world_of_color.api.PaintColor;
@@ -15,8 +15,8 @@ import java.util.EnumMap;
 import java.util.Map;
 
 public class ModFluids {
-    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(BuiltInRegistries.FLUID, WorldOfColor.MODID);
-    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.FLUID_TYPES, WorldOfColor.MODID);
+    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(BuiltInRegistries.FLUID, WorldOfColors.MODID);
+    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.FLUID_TYPES, WorldOfColors.MODID);
 
     private static final Map<PaintColor, DeferredHolder<FluidType, PaintFluidType>> TYPES = new EnumMap<>(PaintColor.class);
     private static final Map<PaintColor, DeferredHolder<Fluid, PaintFluid.Source>> FLUID_HOLDERS = new EnumMap<>(PaintColor.class);

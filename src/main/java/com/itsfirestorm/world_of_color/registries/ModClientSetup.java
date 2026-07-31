@@ -1,8 +1,8 @@
 package com.itsfirestorm.world_of_color.registries;
 
-import com.itsfirestorm.world_of_color.WorldOfColor;
+import com.itsfirestorm.world_of_color.WorldOfColors;
 import com.itsfirestorm.world_of_color.api.PaintColor;
-import com.itsfirestorm.world_of_color.api.WorldOfColorAPI;
+import com.itsfirestorm.world_of_color.api.WorldOfColorsAPI;
 import com.itsfirestorm.world_of_color.fluids.PaintFluidType;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
@@ -12,11 +12,11 @@ import org.jetbrains.annotations.NotNull;
 public class ModClientSetup {
 
     public static void onRegisterClientExtensions(RegisterClientExtensionsEvent event) {
-        ResourceLocation still = ResourceLocation.fromNamespaceAndPath(WorldOfColor.MODID, "block/liquid_soft_still");
-        ResourceLocation flow = ResourceLocation.fromNamespaceAndPath(WorldOfColor.MODID, "block/liquid_soft_flow");
+        ResourceLocation still = ResourceLocation.fromNamespaceAndPath(WorldOfColors.MODID, "block/liquid_soft_still");
+        ResourceLocation flow = ResourceLocation.fromNamespaceAndPath(WorldOfColors.MODID, "block/liquid_soft_flow");
 
         for (PaintColor color : PaintColor.values()) {
-            WorldOfColorAPI.registry().getPaintFluidType(color).ifPresent(fluidType ->
+            WorldOfColorsAPI.registry().getPaintFluidType(color).ifPresent(fluidType ->
                     registerPaintFluidRendering(event, fluidType, still, flow));
         }
     }

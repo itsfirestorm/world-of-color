@@ -2,7 +2,7 @@ package com.itsfirestorm.world_of_color.events;
 
 import com.itsfirestorm.world_of_color.api.PaintColor;
 import com.itsfirestorm.world_of_color.api.PaintHelper;
-import com.itsfirestorm.world_of_color.api.WorldOfColorAPI;
+import com.itsfirestorm.world_of_color.api.WorldOfColorsAPI;
 import com.itsfirestorm.world_of_color.util.PaintColorMapper;
 import com.itsfirestorm.world_of_color.util.PaintColorMapperModded;
 import com.simibubi.create.content.processing.basin.BasinBlockEntity;
@@ -46,7 +46,7 @@ public class BasinDyeEventHandler {
             FluidStack fluidInTank = fluidHandler.getFluidInTank(i);
             if (fluidInTank.isEmpty()) continue;
 
-            Optional<PaintColor> maybeColor = WorldOfColorAPI.registry().getPaintColorForFluidType(fluidInTank.getFluidType());
+            Optional<PaintColor> maybeColor = WorldOfColorsAPI.registry().getPaintColorForFluidType(fluidInTank.getFluidType());
             if (maybeColor.isEmpty()) continue;
             PaintColor paintColor = maybeColor.get();
 
@@ -74,7 +74,7 @@ public class BasinDyeEventHandler {
             }
 
             if(PaintColorMapper.isRecolorable(heldStack) || PaintColorMapperModded.isRecolorable(heldStack)) {
-                var recolored = WorldOfColorAPI.registry().recolor(heldStack, paintColor);
+                var recolored = WorldOfColorsAPI.registry().recolor(heldStack, paintColor);
 
                 if (recolored.isEmpty()) {
                     event.setCanceled(true);

@@ -1,6 +1,6 @@
 package com.itsfirestorm.world_of_color.registries;
 
-import com.itsfirestorm.world_of_color.WorldOfColor;
+import com.itsfirestorm.world_of_color.WorldOfColors;
 import com.itsfirestorm.world_of_color.api.PaintColor;
 import com.itsfirestorm.world_of_color.items.Paint;
 import net.minecraft.world.item.Item;
@@ -10,10 +10,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.EnumMap;
 import java.util.Map;
 
-import static com.itsfirestorm.world_of_color.registries.ModFluids.*;
-
 public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WorldOfColor.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WorldOfColors.MODID);
 
     public static final DeferredItem<Item> RAINBOW_PAINT = ITEMS.register("rainbow_paint",
             () -> new Paint(new Item.Properties(), null));

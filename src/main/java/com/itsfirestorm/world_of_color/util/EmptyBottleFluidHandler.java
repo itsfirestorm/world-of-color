@@ -1,9 +1,8 @@
 package com.itsfirestorm.world_of_color.util;
 
 import com.itsfirestorm.world_of_color.api.PaintColor;
-import com.itsfirestorm.world_of_color.api.WorldOfColorAPI;
+import com.itsfirestorm.world_of_color.api.WorldOfColorsAPI;
 import com.itsfirestorm.world_of_color.fluids.PaintFluidType;
-import com.itsfirestorm.world_of_color.registries.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
@@ -68,7 +67,7 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
         PaintColor color = paintFluidType.getPaintColor();
 
         // Transform the empty bottle into the corresponding paint item
-        return WorldOfColorAPI.registry().getPaintItem(color)
+        return WorldOfColorsAPI.registry().getPaintItem(color)
                 .map(ItemStack::new)
                 .orElse(ItemStack.EMPTY);
     }

@@ -1,8 +1,7 @@
 package com.itsfirestorm.world_of_color;
 
-import com.itsfirestorm.world_of_color.api.PaintHelper;
 import com.itsfirestorm.world_of_color.api.PaintRegistryImpl;
-import com.itsfirestorm.world_of_color.api.WorldOfColorAPI;
+import com.itsfirestorm.world_of_color.api.WorldOfColorsAPI;
 import com.itsfirestorm.world_of_color.events.BasinDyeEventHandler;
 import com.itsfirestorm.world_of_color.items.Paint;
 import com.itsfirestorm.world_of_color.registries.ModFluids;
@@ -34,8 +33,8 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(WorldOfColor.MODID)
-public class WorldOfColor {
+@Mod(WorldOfColors.MODID)
+public class WorldOfColors {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "world_of_color";
     // Directly reference a slf4j logger
@@ -43,7 +42,7 @@ public class WorldOfColor {
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public WorldOfColor(IEventBus modEventBus, ModContainer modContainer) {
+    public WorldOfColors(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -89,7 +88,7 @@ public class WorldOfColor {
         }
 
         // Register API
-        WorldOfColorAPI.internalInit(new PaintRegistryImpl());
+        WorldOfColorsAPI.internalInit(new PaintRegistryImpl());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -116,7 +115,7 @@ public class WorldOfColor {
                     }
                     return null;
                 },
-                WorldOfColorAPI.registry().allPaintItems().values().toArray(Item[]::new)
+                WorldOfColorsAPI.registry().allPaintItems().values().toArray(Item[]::new)
         );
     }
 

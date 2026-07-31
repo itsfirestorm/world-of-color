@@ -2,7 +2,7 @@ package com.itsfirestorm.world_of_color.api;
 
 import net.minecraft.resources.ResourceLocation;
 
-import static com.itsfirestorm.world_of_color.WorldOfColor.MODID;
+import static com.itsfirestorm.world_of_color.WorldOfColors.MODID;
 
 public final class RecipeIds {
     private RecipeIds() {}

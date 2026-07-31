@@ -1,6 +1,6 @@
 package com.itsfirestorm.world_of_color.registries;
 
-import com.itsfirestorm.world_of_color.WorldOfColor;
+import com.itsfirestorm.world_of_color.WorldOfColors;
 import com.itsfirestorm.world_of_color.api.RecipeIds;
 import com.itsfirestorm.world_of_color.recipes.PaintDyesArmor;
 import com.itsfirestorm.world_of_color.recipes.PaintDyesBlocks;
@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 
 public class ModRecipeSerializers {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS =
-            DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, WorldOfColor.MODID);
+            DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, WorldOfColors.MODID);
 
     public static final DeferredHolder<RecipeSerializer<?>, SimpleCraftingRecipeSerializer<PaintDyesArmor>> PAINT_ARMOR_DYE =
             RECIPE_SERIALIZERS.register(RecipeIds.PAINT_ARMOR_DYE.getPath(),
